@@ -3,23 +3,8 @@
     <div class="el-row">
       <div id="__sidebar" class="el-col el-col-5 p-8">
         <main>
-          <ul>
-            <router-link class="no-decoration" to="/" v-slot="{ href, isActive }">
-              <a :href="href">
-                <li :class="{'active': isActive, 'mb-3': true}">
-                  <font-awesome-icon icon="coffee" class="mr-2"/>
-                  Home
-                </li>
-              </a>
-            </router-link>
-            <router-link class="no-decoration" to="/test" v-slot="{ href, isActive }">
-              <a :href="href">
-                <li :class="{'active': isActive, 'mb-3': true}">
-                  <font-awesome-icon icon="coffee" class="mr-2"/>
-                  Test
-                </li>
-              </a>
-            </router-link>
+          <ul v-for="route in routes" v-bind:key="route.path">
+            <navigation-item :name="route.name" :link="route.path" :icon="route.icon" />
           </ul>
         </main>
       </div>
@@ -29,3 +14,18 @@
     </div>
   </div>
 </template>
+<script>
+import NavigationItem from "@/layouts/admin/NavigationItem";
+import { routes } from '@/router'
+
+export default {
+  components: {
+    NavigationItem
+  },
+  data: function() {
+    return {
+      routes
+    }
+  }
+}
+</script>

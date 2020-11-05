@@ -4,10 +4,17 @@ import Home from '@/views/Home.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'Home',
+    icon: 'coffee',
+    component: Home
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    icon: 'user',
     component: Home
   },
 ]
