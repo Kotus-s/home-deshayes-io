@@ -1,8 +1,15 @@
-@import '_normalize';
-@import '_spacing';
-@import '_base';
-
 @import '_variables';
+
+@import 'common/normalize';
+@import 'common/spacing';
+@import 'common/base';
+@import 'common/flex';
+
 @import 'element-variables';
 
+@import 'components/heading';
+@import 'components/button';
+@import 'components/drawer';
+
 @import 'layouts/admin';
+

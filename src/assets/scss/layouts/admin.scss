@@ -1,11 +1,11 @@
 #__admin {
   min-height: 100vh;
-  background-color: #161a1c;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
 
   #__sidebar {
     min-height: 100vh;
-    background-color: #090a0b;
+    background-color: var(--background-color-darken);
     border-right: 1px solid #282c2f;
     box-shadow: inset -5px 0 20px 0 rgba(0,0,0,.18039);
 
@@ -24,9 +24,9 @@
           padding:10px 24px;
           font-size:15px;
           line-height: 28px;
-          color: #5a6a76;
+          color: var(--text-grey);
           font-weight: 300;
-
+          cursor: pointer;
 
           &:before {
             content:"";
@@ -42,24 +42,24 @@
             transition:.3s ease-in-out;
           }
 
-          &:not(.active) {
+          &:not(.router-link-exact-active) {
             &:hover {
-              color:#fff;
+              color: var(--text-color);
 
               &:before {
-                background-color: #4783e9;
-                opacity:0.5;
+                background-color: var(--primary-color-lighten);
+                opacity:1;
                 transform:translateY(0)
               }
             }
           }
 
-          &.active {
-            color:#fff;
+          &.router-link-exact-active {
+            color: var(--text-color);
             font-weight:600;
 
             &:before {
-              background-color: #4783e9;
+              background-color: var(--primary-color);
               opacity:1;
               transform:translateY(0)
             }

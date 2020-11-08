@@ -1,0 +1,25 @@
+#admin-drawer.el-drawer__wrapper {
+  .el-drawer__container {
+    .el-drawer {
+      overflow: auto;
+      width: calc(100% - 40px) !important;
+      max-width: 40rem;
+      background: var(--primary-color);
+      margin: 20px;
+      outline: none !important;
+      height: calc(100% - 40px);
+      border-radius: 8px;
+      padding: 24px 28px;
+
+      .el-drawer__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .el-drawer__content {
+          min-height: 100%;
+        }
+      }
+    }
+  }
+}

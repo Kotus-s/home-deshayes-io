@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <component :is="layout">
-      <router-view></router-view>
+      <slot></slot>
     </component>
   </div>
 </template>

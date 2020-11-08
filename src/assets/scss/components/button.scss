@@ -1,0 +1,33 @@
+@mixin el-button-color($name, $color, $hover-color, $parent) {
+  &--#{$name} {
+    background-color: #{$color};
+
+    &:hover {
+      background-color: #{$color} !important;
+    }
+
+    &#{$parent}--hoverable:hover {
+      background-color: #{$hover-color} !important;
+    }
+  }
+}
+
+.el-button {
+  $self: &;
+  border: none;
+  color: var(--text-color);
+  transition: all .2s ease;
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,.2)!important;
+
+  &:hover {
+    color: var(--text-color);
+    background: transparent !important;
+  }
+
+  &--translatable:hover {
+    transform: translateY(-4px);
+  }
+
+  @include el-button-color('primary', var(--primary-color), var(--primary-color-darken), $self);
+  @include el-button-color('secondary', #ef48ff, #4d0a53, $self);
+}
