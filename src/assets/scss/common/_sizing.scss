@@ -1,0 +1,6 @@
+@for $i from 1 through 6 {
+  .size-#{$i} {
+    font-size: calc(#{$i} * 8px) !important;
+    line-height: calc(12px + (#{$i} * 8px));
+  }
+}

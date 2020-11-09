@@ -1,0 +1,22 @@
+@mixin color-variation($name, $h, $s, $l) {
+  --#{$name}-color-hu: #{$h}, #{$s};
+  --#{$name}-color-lightness: #{$l};
+
+  --#{$name}-color: hsl(var(--#{$name}-color-hu), var(--#{$name}-color-lightness));
+  --#{$name}-color-lighten: hsl(var(--#{$name}-color-hu), calc(var(--#{$name}-color-lightness) + 10%));
+  --#{$name}-color-darken: hsl(var(--#{$name}-color-hu), calc(var(--#{$name}-color-lightness) - 10%));
+}
+
+@mixin text-color($name) {
+  .text-#{$name} {
+    color: var(--#{$name}-color);
+  }
+
+  .text-#{$name}-darken {
+    color: var(--#{$name}-color-darken);
+  }
+
+  .text-#{$name}-lighten {
+    color: var(--#{$name}-color-lighten);
+  }
+}

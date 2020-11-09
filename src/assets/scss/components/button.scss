@@ -1,13 +1,50 @@
-@mixin el-button-color($name, $color, $hover-color, $parent) {
+@mixin el-button-color($name, $text-color, $color, $hover-color, $focus-color, $parent) {
   &--#{$name} {
+    --text-color: #{$text-color};
     background-color: #{$color};
+    color: var(--text-color);
 
     &:hover {
       background-color: #{$color} !important;
+      color: var(--text-color);
     }
 
-    &#{$parent}--hoverable:hover {
-      background-color: #{$hover-color} !important;
+    &:focus {
+      background-color: #{$color} !important;
+      color: var(--text-color);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      filter: brightness(75%);
+      background-color: #{$color} !important;
+      & span {
+        color: var(--text-color);
+      }
+    }
+
+    &#{$parent}--bold {
+      font-weight: 600;
+    }
+
+    &#{$parent}--uppercase  {
+      text-transform: uppercase;
+    }
+
+    &#{$parent}--full {
+      width: 100%
+    }
+
+    &#{$parent}--hoverable {
+      &:not(:disabled):hover {
+        background-color: #{$hover-color} !important;
+      }
+    }
+
+    &#{$parent}--focusable {
+      &:not(:disabled):hover {
+        background-color: #{$focus-color} !important;
+      }
     }
   }
 }
@@ -24,10 +61,15 @@
     background: transparent !important;
   }
 
-  &--translatable:hover {
-    transform: translateY(-4px);
+  &--translatable {
+    &:not(:disabled):hover {
+      transform: translateY(-4px);
+    }
   }
 
-  @include el-button-color('primary', var(--primary-color), var(--primary-color-darken), $self);
-  @include el-button-color('secondary', #ef48ff, #4d0a53, $self);
+  @each $color in $colors {
+    @include el-button-color($color, var(--text-color), var(--#{$color}-color), var(--#{$color}-color-lighten), var(--#{$color}-color-darken), $self);
+  }
+
+  @include el-button-color('white', black, white, white, white, $self);
 }

@@ -5,60 +5,17 @@ body {
   font-weight: 300;
 }
 
+$colors: ('primary', 'secondary', 'success', 'danger', 'warning');
+
 :root {
-  @include color-variation('primary', 217, 100%, 56%);
+    @include color-variation('primary', 217, 100%, 56%);
+    @include color-variation('secondary', 274, 57%, 44%);
+    @include color-variation('success', 127, 65%, 53%);
+    @include color-variation('danger', 355, 100%, 64%);
+    @include color-variation('warning', 44, 100%, 50%);
 
   --text-color: white;
   --text-grey: #5a6a76;
   --background-color: #161a1c;
   --background-color-darken: #090a0b;
-}
-
-.fading-enter-active, .fading-leave-active {
-  transition-duration: 0.3s;
-  transition-property: opacity;
-  transition-timing-function: ease;
-}
-
-.fading-enter, .fading-leave-active {
-  opacity: 0
-}
-
-.center {
-  margin: auto
-}
-
-.t-center {
-  text-align: center
-}
-
-.t-right {
-  text-align: right
-}
-
-.t-left {
-  text-align: left
-}
-
-.t-justify {
-  text-align: justify
-}
-
-.cursor-pointer {
-  cursor: pointer
-}
-
-@for $i from 1 through 6 {
-  .size-#{$i} {
-    font-size: calc(#{$i} * 8px) !important;
-    line-height: calc(12px + (#{$i} * 8px));
-  }
-}
-
-.hover-y-translate {
-  --translate-y: -4px;
-  transition: all .2s ease;
-  &:hover {
-    transform: translateY(var(--translate-y));
-  }
 }

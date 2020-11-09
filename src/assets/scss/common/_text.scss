@@ -1,0 +1,19 @@
+@each $color in $colors {
+  @include text-color($color);
+}
+
+.t-center {
+  text-align: center
+}
+
+.t-right {
+  text-align: right
+}
+
+.t-left {
+  text-align: left
+}
+
+.t-justify {
+  text-align: justify
+}

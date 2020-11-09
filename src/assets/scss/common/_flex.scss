@@ -30,6 +30,14 @@
   align-self: flex-end
 }
 
+.self-start {
+  align-self: flex-start
+}
+
+.self-grow {
+  flex-grow: 1
+}
+
 .justify-center {
   justify-content: center
 }
@@ -45,3 +53,4 @@
 .justify-end {
   justify-content: flex-end
 }
+
