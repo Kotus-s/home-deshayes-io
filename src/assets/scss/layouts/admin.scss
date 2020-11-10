@@ -1,5 +1,6 @@
 #__admin {
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   background-color: var(--background-color);
   color: var(--text-color);
 
@@ -15,7 +16,6 @@
 
     @media only screen and (max-width: 991px) {
       display: block !important;
-
     }
 
     ul {
@@ -27,6 +27,10 @@
       padding: 0;
       margin: 0;
 
+      li:nth-child(n+6) {
+         display: none;
+      }
+
       li {
         padding: 15px;
         cursor: pointer;
@@ -34,7 +38,9 @@
         font-weight: 300;
         transition:.3s ease-in-out;
         display: flex;
-        align-items: center;
+        min-width: 30px;
+        justify-content: center;
+        -webkit-tap-highlight-color: transparent;
 
         &.router-link-exact-active {
           border-radius: 4px;
@@ -50,19 +56,7 @@
         }
 
         span {
-          display: inline-block;
-          max-width: 0;
-          opacity: 0;
-          padding-left: .5em;
-          transform: translate3d(-.5em, 0, 0);
-          transition: opacity .3s, max-width .3s, transform .3s;
-          transition-timing-function: ease-in-out;
-        }
-
-        &.router-link-exact-active span {
-          opacity: 1;
-          max-width: 40px;
-          transform: translate3d(0, 0, 0);
+          display: none;
         }
       }
     }

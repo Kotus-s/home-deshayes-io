@@ -24,6 +24,24 @@ export const routes = [
     icon: 'times',
     component: Test
   },
+  {
+    path: '/test3',
+    name: 'Super long text',
+    icon: 'clock',
+    component: Test
+  },
+  {
+    path: '/test4',
+    name: 'Test 4',
+    icon: 'adjust',
+    component: Test
+  },
+  {
+    path: '/test5',
+    name: 'Test 5',
+    icon: 'atom',
+    component: Test
+  },
 ]
 
 const router = new VueRouter({
