@@ -3,8 +3,9 @@ import App from './App.vue'
 
 import '@/assets/scss/_main.scss'
 
+import '@/plugins/vue-perfect-scrollbar'
 import '@/plugins/fontawesome'
-import '@/plugins/element.js'
+import '@/plugins/element'
 import '@/plugins/layouts'
 
 import router from './router'

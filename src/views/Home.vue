@@ -21,6 +21,11 @@
       <el-button disabled class="el-button--secondary el-button--hoverable el-button--translatable el-button--focusable" @click="drawer = !drawer">
         Open drawer
       </el-button>
+
+      <el-button v-for="index in 150" :key="index" disabled class="el-button--secondary">
+        Big button Disabled {{ index }}
+      </el-button>
+
       <el-drawer id="admin-drawer" :visible.sync="drawer" :with-header="false">
         <div class="el-drawer__content flex flex-column">
           <header class="flex align-start justify-between mb-4">
