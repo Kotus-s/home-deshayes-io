@@ -14,6 +14,11 @@
         </transition>
       </main>
     </div>
+    <nav id="__mobile-navbar">
+      <ul>
+        <navigation-item class="mt-3" v-for="route in routes" v-bind:key="route.path" :name="route.name" :link="route.path" :icon="route.icon" />
+      </ul>
+    </nav>
   </div>
 </template>
 <script>

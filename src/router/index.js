@@ -18,6 +18,12 @@ export const routes = [
     icon: 'user',
     component: Test
   },
+  {
+    path: '/test2',
+    name: 'Test2',
+    icon: 'times',
+    component: Test
+  },
 ]
 
 const router = new VueRouter({
