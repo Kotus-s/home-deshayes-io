@@ -1,24 +1,39 @@
 # home-deshayes-io
 
-## Project setup
-```
-yarn install
+## 📣 About this respository
+
+A personal dashboard to handle all my future home automation
+
+## 🛡 Requirements
+
+* Make sure you have installed [Node.js](https://nodejs.org/en/) (you will need **at least v12.0.0**) and [Git](https://git-scm.com/). 
+
+## ⚙ Installation
+
+Clone this repository 
+
+```bash
+git clone https://github.com/Kotus-s/home-deshayes-io.git
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
+## 💎 Usage
+
+```bash
+yarn serve # run development server
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
+```bash
+yarn build # build for production
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```bash
+yarn lint # run the linter
+```
+
+## 🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## 📄 License
+
+[MIT license](https://opensource.org/licenses/MIT).
