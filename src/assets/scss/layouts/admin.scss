@@ -64,6 +64,7 @@
 
   #__sidebar {
     min-height: 100vh;
+    height: -webkit-fill-available;
     background-color: var(--background-color-darken);
     border-right: 1px solid #282c2f;
     box-shadow: inset -5px 0 20px 0 rgba(0,0,0,.18039);
@@ -130,6 +131,7 @@
 
   #__content {
     min-height: 100vh;
+    height: -webkit-fill-available;
     overflow: auto;
   }
 }
