@@ -35,6 +35,10 @@
       width: 100%
     }
 
+    &#{$parent}--right {
+      float: right;
+    }
+
     &#{$parent}--hoverable {
       &:not(:disabled):hover {
         background-color: #{$hover-color} !important;

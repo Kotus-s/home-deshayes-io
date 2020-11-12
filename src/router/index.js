@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/views/Home'
-import Test from "@/views/Test";
 
 Vue.use(VueRouter)
 
@@ -10,37 +8,46 @@ export const routes = [
     path: '/',
     name: 'Home',
     icon: 'coffee',
-    component: Home
+    component: () => import('@/views/Home'),
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    icon: 'coffee',
+    component: () => import('@/views/Login'),
+    meta : {
+      layout: 'auth'
+    }
   },
   {
     path: '/test',
     name: 'Test',
     icon: 'user',
-    component: Test
+    component: () => import('@/views/Test'),
   },
   {
     path: '/test2',
     name: 'Test2',
     icon: 'times',
-    component: Test
+    component: () => import('@/views/Test'),
   },
   {
     path: '/test3',
     name: 'Super long text',
     icon: 'clock',
-    component: Test
+    component: () => import('@/views/Test'),
   },
   {
     path: '/test4',
     name: 'Test 4',
     icon: 'adjust',
-    component: Test
+    component: () => import('@/views/Test'),
   },
   {
     path: '/test5',
     name: 'Test 5',
     icon: 'atom',
-    component: Test
+    component: () => import('@/views/Test'),
   },
 ]
 

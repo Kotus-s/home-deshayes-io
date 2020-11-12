@@ -1,0 +1,11 @@
+@each $color in $colors {
+  &.el-input--#{$color} {
+    input.el-input__inner:focus {
+      border: 1px solid var(--#{$color}-color-lighten);
+    }
+  }
+}
+
+.el-form--label-top .el-form-item__label {
+  padding: 0px;
+}

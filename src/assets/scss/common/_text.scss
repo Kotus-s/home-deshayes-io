@@ -17,3 +17,9 @@
 .t-justify {
   text-align: justify
 }
+
+.t-sm-center {
+  @media only screen and (max-width: 991px) {
+    text-align: center
+  }
+}

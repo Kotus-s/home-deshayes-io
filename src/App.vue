@@ -10,7 +10,7 @@
 export default {
   computed: {
     layout() {
-      return (this.$router.meta && this.$router.meta.layout || 'admin') + '-layout'
+      return (this.$route.meta.layout || 'admin') + '-layout'
     }
   }
 }
