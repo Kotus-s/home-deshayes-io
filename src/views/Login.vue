@@ -1,9 +1,9 @@
 <template>
   <div class="login-container">
-    <div class="el-row el-row--flex align-center justify-center">
+    <div class="el-row el-row--flex items-center justify-center">
       <div class="el-col el-col-20 el-col-sm-18">
         <div class="card">
-          <div class="card__title t-sm-center">
+          <div class="card__title text-center">
             <h2 class="heading heading--shaped">
               Login
             </h2>

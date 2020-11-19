@@ -1,11 +1,11 @@
 <template>
-  <div class="el-row">
-    <div class="el-col-24 mb-8">
+  <div class="grid grid-flow-row grid-cols-1">
+    <div class="col-span-12 mb-8">
       <h3 class="heading heading--shaped">
         Home
       </h3>
     </div>
-    <div class="el-col-24">
+    <div class="col-span-12">
       <el-button class="el-button--primary el-button--hoverable" @click="drawer = !drawer">
         Open drawer
       </el-button>
@@ -27,14 +27,14 @@
       </el-button>
 
       <el-drawer id="admin-drawer" :visible.sync="drawer" :with-header="false">
-        <div class="el-drawer__content flex flex-column">
-          <header class="flex align-start justify-between mb-4">
+        <div class="el-drawer__content flex flex-col">
+          <header class="flex items-start justify-between mb-4">
             <h4 class="heading heading--bold">Titre</h4>
             <div>
-              <font-awesome-icon class="cursor-pointer size-3 hover-y-translate" @click="drawer = !drawer" icon="times" role="img"/>
+              <font-awesome-icon class="cursor-pointer text-xl transform transition-transform hover:-translate-y-1" @click="drawer = !drawer" icon="times" role="img"/>
             </div>
           </header>
-          <main class="self-grow">
+          <main class="flex-grow">
             Content
           </main>
           <footer>

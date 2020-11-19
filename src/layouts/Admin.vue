@@ -1,8 +1,8 @@
 <template>
   <div id="__admin">
 
-      <div class="el-row">
-        <div id="__sidebar" class="el-col el-col-5 p-8">
+      <div class="grid grid-flow-col grids-col-12">
+        <div id="__sidebar" class="col-span-3 p-8">
           <main>
             <ul>
               <navigation-item v-for="route in routes" v-bind:key="route.path" :name="route.name" :link="route.path" :icon="route.icon" />
@@ -10,7 +10,7 @@
           </main>
         </div>
         <perfect-scrollbar>
-          <main id="__content" class="el-col el-col-24 el-col-xs-24 el-col-sm-24 el-col-md-19 py-10 px-12">
+          <main id="__content" class="py-10 px-14">
             <transition name="fading" mode="out-in">
               <router-view></router-view>
             </transition>
